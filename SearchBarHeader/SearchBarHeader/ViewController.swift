@@ -22,6 +22,9 @@ class ViewController: UIViewController {
 
     headerView = NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: nil)[0] as? HeaderView
     headerView.frame = CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 144)
+    
+    
+    self.searchContainerView.hidden = true
 
     let headerContainerView = UIView(frame: headerView.frame)
     headerContainerView.backgroundColor = UIColor.clearColor()
@@ -57,18 +60,36 @@ extension ViewController: UITableViewDelegate {
 
     if let headerView = self.headerView {
       let maximumHeaderOffset = CGRectGetHeight(headerView.frame) - CGRectGetHeight(headerView.searchBar.frame)
+        
       if offset >= maximumHeaderOffset {
-//        headerView.transform = CGAffineTransformMakeTranslation(0, offset - maximumHeaderOffset)
+        
+        println("nuninuninuu \(offset - maximumHeaderOffset) offset \(offset)")
+        
+        self.searchContainerView.hidden = false
+        headerView.transform = CGAffineTransformMakeTranslation(0, offset - maximumHeaderOffset)
         if let searchBar = self.headerView.searchBar {
-          if searchBar.superview == self.headerView {
-            searchBar.removeFromSuperview()
             searchContainerView.addSubview(searchBar)
             searchBar.frame = CGRectMake(0, 0, CGRectGetWidth(searchContainerView.frame), CGRectGetHeight(searchContainerView.frame))
-          }
+            
+            println("search bar")
+            
         }
       } else if (offset <= 0){
+        
+        println("ladidadida \(offset - maximumHeaderOffset) offset \(offset)")
+        
+        self.searchContainerView.hidden = true
+        self.headerView.addSubview(self.headerView.searchBar)
+        self.headerView.searchBar.frame = CGRectMake(0, 100, CGRectGetWidth(searchContainerView.frame), CGRectGetHeight(searchContainerView.frame))
         headerView.transform = CGAffineTransformMakeTranslation(0, min(offset, 0))
+      } else {
+        self.searchContainerView.hidden = true
+        self.headerView.addSubview(self.headerView.searchBar)
+        self.headerView.searchBar.frame = CGRectMake(0, 100, CGRectGetWidth(searchContainerView.frame), CGRectGetHeight(searchContainerView.frame))
+        println("hello helo \(offset - maximumHeaderOffset) offset \(offset)")
       }
+        
+        
     }
   }
 }
@@ -89,6 +110,7 @@ extension ViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
     cell.textLabel?.text = "CELL \(indexPath.row)"
+    cell.backgroundColor = UIColor.yellowColor()
     return cell
   }
 }
