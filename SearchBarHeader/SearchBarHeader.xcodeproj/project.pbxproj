@@ -13,7 +13,6 @@
 		77099A291B9AC3B90092FD04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77099A281B9AC3B90092FD04 /* Images.xcassets */; };
 		77099A2C1B9AC3B90092FD04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77099A2A1B9AC3B90092FD04 /* LaunchScreen.xib */; };
 		77099A381B9AC3B90092FD04 /* SearchBarHeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77099A371B9AC3B90092FD04 /* SearchBarHeaderTests.swift */; };
-		77099A421B9AC4200092FD04 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77099A411B9AC4200092FD04 /* TableViewController.swift */; };
 		77099A441B9AC4950092FD04 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77099A431B9AC4950092FD04 /* HeaderView.swift */; };
 		77099A461B9AC4A20092FD04 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77099A451B9AC4A20092FD04 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		77099A311B9AC3B90092FD04 /* SearchBarHeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchBarHeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77099A361B9AC3B90092FD04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77099A371B9AC3B90092FD04 /* SearchBarHeaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarHeaderTests.swift; sourceTree = "<group>"; };
-		77099A411B9AC4200092FD04 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		77099A431B9AC4950092FD04 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		77099A451B9AC4A20092FD04 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +87,6 @@
 				77099A281B9AC3B90092FD04 /* Images.xcassets */,
 				77099A2A1B9AC3B90092FD04 /* LaunchScreen.xib */,
 				77099A1F1B9AC3B90092FD04 /* Supporting Files */,
-				77099A411B9AC4200092FD04 /* TableViewController.swift */,
 				77099A431B9AC4950092FD04 /* HeaderView.swift */,
 				77099A451B9AC4A20092FD04 /* HeaderView.xib */,
 			);
@@ -223,7 +220,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				77099A241B9AC3B90092FD04 /* ViewController.swift in Sources */,
-				77099A421B9AC4200092FD04 /* TableViewController.swift in Sources */,
 				77099A221B9AC3B90092FD04 /* AppDelegate.swift in Sources */,
 				77099A441B9AC4950092FD04 /* HeaderView.swift in Sources */,
 			);
