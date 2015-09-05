@@ -71,21 +71,18 @@ extension ViewController: UITableViewDelegate {
             searchContainerView.addSubview(searchBar)
             searchBar.frame = CGRectMake(0, 0, CGRectGetWidth(searchContainerView.frame), CGRectGetHeight(searchContainerView.frame))
             
-            println("search bar")
+            println("search bar \(searchBar) frame \(searchBar.frame)")
             
         }
       } else if (offset <= 0){
         
         println("ladidadida \(offset - maximumHeaderOffset) offset \(offset)")
-        
-        self.searchContainerView.hidden = true
-        self.headerView.addSubview(self.headerView.searchBar)
-        self.headerView.searchBar.frame = CGRectMake(0, 100, CGRectGetWidth(searchContainerView.frame), CGRectGetHeight(searchContainerView.frame))
         headerView.transform = CGAffineTransformMakeTranslation(0, min(offset, 0))
       } else {
         self.searchContainerView.hidden = true
-        self.headerView.addSubview(self.headerView.searchBar)
-        self.headerView.searchBar.frame = CGRectMake(0, 100, CGRectGetWidth(searchContainerView.frame), CGRectGetHeight(searchContainerView.frame))
+        headerView.addSubview(self.headerView.searchBar)
+        headerView.searchBar.frame = CGRectMake(0, 100, CGRectGetWidth(searchContainerView.frame), CGRectGetHeight(searchContainerView.frame))
+//        println("search bar \(self.headerView.searchBar) frame \(self.headerView.searchBar.frame)")
         println("hello helo \(offset - maximumHeaderOffset) offset \(offset)")
       }
         

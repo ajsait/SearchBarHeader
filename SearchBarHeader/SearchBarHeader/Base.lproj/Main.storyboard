@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FcB-PQ-7nW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FcB-PQ-7nW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -21,47 +21,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eil-Hz-Y9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="392" y="313"/>
+            <point key="canvasLocation" x="209.06666666666666" y="296.30666666666667"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="31b-nE-CHy">
             <objects>
                 <viewController id="d9G-X8-mLr" customClass="ViewController" customModule="SearchBarHeader" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lkr-Ws-QJZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="lCx-Uf-eQZ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W8F-PZ-ViQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8iN-W3-ckx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8iN-W3-ckx">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="d9G-X8-mLr" id="yMa-IT-UIp"/>
                                     <outlet property="delegate" destination="d9G-X8-mLr" id="JHy-Ok-gft"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7J-Rs-3kF">
+                            <view contentMode="scaleToFill" id="r7J-Rs-3kF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8SZ-KT-zja"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="zfQ-95-Wfy"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="r7J-Rs-3kF" firstAttribute="top" secondItem="Lkr-Ws-QJZ" secondAttribute="bottom" id="GAA-Bx-uNa"/>
-                            <constraint firstItem="r7J-Rs-3kF" firstAttribute="leading" secondItem="W8F-PZ-ViQ" secondAttribute="leading" id="Sb5-Df-YhN"/>
-                            <constraint firstAttribute="trailing" secondItem="r7J-Rs-3kF" secondAttribute="trailing" id="T3C-MN-Skg"/>
-                            <constraint firstItem="8iN-W3-ckx" firstAttribute="top" secondItem="Lkr-Ws-QJZ" secondAttribute="bottom" id="a05-Qt-TS0"/>
-                            <constraint firstItem="lCx-Uf-eQZ" firstAttribute="top" secondItem="8iN-W3-ckx" secondAttribute="bottom" id="hx1-zM-KiV"/>
-                            <constraint firstItem="8iN-W3-ckx" firstAttribute="leading" secondItem="W8F-PZ-ViQ" secondAttribute="leading" id="oG8-pK-HW8"/>
-                            <constraint firstAttribute="trailing" secondItem="8iN-W3-ckx" secondAttribute="trailing" id="v2G-m6-Uin"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j5D-2E-WfM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -72,7 +57,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rap-ja-J47" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911.5" y="312.5"/>
+            <point key="canvasLocation" x="614.5" y="287.5"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
